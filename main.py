@@ -1,43 +1,43 @@
-class Student:
-    # [assignment] Skeleton class. Add your code here
-    def __init__(self, name, age, tracks, score):
-        self.name = name;
-        self.age = age;
-        self.tracks = tracks;
-        self.score = score;
+# Read text from a file, and count the occurence of words in that text
+# Example:
+# count_words("The cake is done. It is a big cake!") 
+# --> {"cake":2, "big":1, "is":2, "the":1, "a":1, "it":1}
+
+
+filename = "story.txt";
+
+def read_file_content(filename):
     
-    def change_name(self, name):
-        return name;
-    def change_age(self, age):
-        return int(age);
-    def add_track(self, tracks):
-        return tracks;
-    def get_score(self):
-        return self.score;
-
-Bob = Student(name = "Bob", age=26, tracks=["FE","BE"],score=20.90)
-
-# Outputing the initialized parameters
-print(Bob.name);
-print(Bob.age);
-print(Bob.tracks);
-print(Bob.score);
-
-print("\n");
-
-# Changing the initialized parameters except the score.
-y = Bob.change_name("Peter")
-x = Bob.change_age(34)
-z = Bob.add_track("UI/UX")
-u = Bob.get_score()
-
-print(y);
-print(x);
-print(z);
-print(u);
+    # [assignment] Add your code here 
+    
+    f = open(filename, "r");
+    f_read = f.read();
+    if f_read:
+        return "Hello World";
+print(read_file_content(filename));
 
 
-
-
+def count_words():
+    text = read_file_content('story.txt');
+    
+    # [assignment] Add your code here
+    txt2 = open(filename, "r");
+    txt2 = txt2.read();
+    
+    punct = '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~';
+    txt3 = txt2.strip(punct);
+    
+    txt3 = txt3.split();
+    
+    
+    dct = dict();
+    for i in txt3:
+        if i in dct:
+            dct[i] += 1;
+        else:
+            dct[i] = 1;
+    return dct;
+    
+print(count_words());
 
 
