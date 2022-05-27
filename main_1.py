@@ -3,6 +3,9 @@
 # find_anagrams("hello") --> False
 # find_anagrams("racecar") --> True
 
+# PLEASE KINDLY NOTE THAT THIS IS PALIDRONE THAT I DID HERE, 
+# I REALIZED THIS AFTER SUBMISSION, THANK YOU.
+
 #txt = "home";
 txt = "racecar";
 
