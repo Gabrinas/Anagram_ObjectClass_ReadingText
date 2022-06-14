@@ -12,8 +12,9 @@ txt = "racecar";
 def find_anagrams(word):
     
     # [assignment] Add your code here
-    txt2 = txt[::-1];
-    if txt == txt2:
+    txt2 = word.lower();
+    txt3 = txt2[::-1];
+    if txt2 == txt3:
         return True;
     else:
         return False;
